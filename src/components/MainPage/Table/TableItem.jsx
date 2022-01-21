@@ -1,17 +1,38 @@
 import React from "react";
+import IconButton from "../../common/IconButton";
 
-const TableItem = ({brand, number, engine, model}) => {
+import editIco from "../../../resourses/images/edit.svg"
+import deleteIco from "../../../resourses/images/delete.svg"
+
+const TableItem = ({id, brand, carNumber, engineType, model, editCar, deleteCar}) => {
+
+    function onDelete() {
+        deleteCar(id)
+    }
+    function onEdit() {
+        editCar(id)
+    }
+
     return (
         <tr>
             <td>{brand}</td>
-            <td>{number}</td>
-            <td>{engine}</td>
+            <td>{carNumber}</td>
+            <td>{engineType}</td>
             <td>{model}</td>
             <td>
-                <button><img alt="edit"/></button>
-                <button><img alt="delete"/></button>
+                <IconButton
+                    alt="edit"
+                    iconSrc={editIco}
+                    classStyle="item-buttons_edit"
+                    onClick={editCar}
+                />
+                <IconButton
+                    alt="delete"
+                    iconSrc={deleteIco}
+                    classStyle="item-buttons_delete"
+                    onClick={onDelete}
+                />
             </td>
-
         </tr>
     )
 }

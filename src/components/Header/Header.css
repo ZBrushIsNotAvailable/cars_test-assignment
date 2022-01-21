@@ -14,6 +14,8 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 23px;
+
+
 }
 
 .controls {
@@ -29,8 +31,6 @@
 .controls__btn {
     height: 24px;
     width: 24px;
-    background-color: transparent;
-    border: none;
 }
 
 .logo{

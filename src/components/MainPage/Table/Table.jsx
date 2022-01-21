@@ -5,14 +5,14 @@ import TablePaginator from "./TablePaginator/TablePaginator";
 
 import "./Table.css"
 
-const Table = ({cars}) => {
+const Table = ({cars, editCar}) => {
     return (
         <div className="table_wrapper">
             <table className="table">
                 <TableHead/>
-                <TableBody cars={cars}/>
+                <TableBody cars={cars} editCar={editCar}/>
             </table>
-            <TablePaginator cars={cars}/>
+            <TablePaginator amount={cars.length}/>
         </div>
 
     )

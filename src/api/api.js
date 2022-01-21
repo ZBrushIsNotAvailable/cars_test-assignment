@@ -2,7 +2,7 @@ const baseURL = "https://test-backend.esverito.com/"
 
 export const authAPI = {
     login() {
-        console.log("login")
+        // console.log("login")
 
         const settings = {
             method: "POST",
@@ -42,24 +42,80 @@ export const carsAPI = {
             .catch(err => console.log("Error getting all cars:", err))
     },
 
-    add(specs) {
-        return fetch(`${baseURL}car`, {
+    addCar({
+               brand,
+               number,
+               engine,
+               model,
+           }) {
+
+        const settings = {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                "Authorization": localStorage.getItem("token")
             },
             body: JSON.stringify({
-                "brand": specs.brand,
-                "carNumber": specs.carNumber,
-                "engineType": specs.engineType,
+                "brand": brand,
+                "carNumber": number,
+                "engineType": engine,
                 "mileage": 0,
-                "model": specs.model,
+                "model": model,
                 "new": true,
                 "price": 0,
                 "transmission": "MANUAL",
                 "yearOfConstruction": 0
             })
-        })
-    }
+        }
 
+        return fetch(`${baseURL}car`, settings)
+            .then(response => response.json())
+            .catch(err => console.log("Error adding car:", err))
+    },
+
+    editCar({
+                brand,
+                number,
+                engine,
+                model,
+            }){
+
+        const settings = {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": localStorage.getItem("token")
+            },
+            body: JSON.stringify({
+                "brand": brand,
+                "carNumber": number,
+                "engineType": engine,
+                "mileage": 0,
+                "model": model,
+                "new": true,
+                "price": 0,
+                "transmission": "MANUAL",
+                "yearOfConstruction": 0
+            })
+        }
+
+        return fetch(`${baseURL}api/car`, settings)
+            .then(response => response.json())
+            .catch(err => console.log("Error adding car:", err))
+    },
+
+    deleteCar(carId) {
+
+        const settings = {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": localStorage.getItem("token")
+            }
+        }
+
+        return fetch(`${baseURL}car/${carId}`, settings)
+            .then(response => response.json())
+            .catch(err => console.log("Error adding car:", err))
+    }
 }

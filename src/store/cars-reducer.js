@@ -1,7 +1,5 @@
 import {carsAPI} from "../api/api";
 
-
-const ADD_CAR = "ADD_CAR";
 const SET_CARS = "SET_CARS";
 
 const initState = {
@@ -9,11 +7,6 @@ const initState = {
 }
 const carsReducer = (state = initState, action) => {
     switch (action.type) {
-        case ADD_CAR:
-            return {
-                ...state,
-
-            }
         case SET_CARS:
             return {
                 ...state,
@@ -24,18 +17,30 @@ const carsReducer = (state = initState, action) => {
     }
 }
 
-const addCarAC = (properties) => ({type: ADD_CAR, properties})
 const setCars = (cars) => ({type: SET_CARS, cars})
 
-export const addCar = specs => async dispatch => {
-    const data = await carsAPI.add(specs);
-    console.log(data)
-}
 
 export const getAllCars = () => async dispatch => {
     const data = await carsAPI.getAllCars();
-    console.log("cars reducer", data.cars)
+    // console.log("cars reducer", data.cars)
     dispatch(setCars(data.cars))
+}
+
+export const addCar = specs => async dispatch => {
+    const data = await carsAPI.addCar(specs);
+    console.log(specs)
+    console.log("addCar reducer", data)
+    dispatch(getAllCars())
+}
+
+export const editCar = carId => async dispatch => {
+
+}
+
+export const deleteCar = carId => async dispatch => {
+    const data = await carsAPI.deleteCar(carId);
+    console.log("deleteCar red", data)
+    dispatch(getAllCars())
 }
 
 export default carsReducer

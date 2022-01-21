@@ -13,7 +13,14 @@ const Button = ({onClick, classStyle = "", filled = true, ...props}) => {
     }
 
     return (
-        <button onClick={onClick} className={btnStyles()} type={props.type} form={props.form}>{props.children}</button>
+        <button
+            onClick={onClick}
+            className={btnStyles()}
+            type={props.type}
+            form={props.form}
+        >
+            {props.children}
+        </button>
     )
 }
 

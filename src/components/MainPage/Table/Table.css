@@ -1,21 +1,42 @@
+.table_wrapper{
+
+    background-color: #fff;
+    border-radius: 4px
+}
+
 .table {
     width: 100%;
 }
 
 .table tr {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    border: solid;
+    border-width: 1px 0;
     height: 48px;
     width: 100%;
 }
 
+.table tr:first-child {
+    border-width: 0 0 1px 0;
+}
+
 .table th {
     padding: 0 20px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table th:last-child {
+    width: 10px;
 }
 
 .table td {
     padding: 0 20px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.item-buttons_edit {
+    margin-right: 25px;
 }
 
 /*.tr {*/

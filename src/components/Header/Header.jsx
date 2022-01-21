@@ -3,11 +3,10 @@ import React from "react";
 import './Header.css';
 
 import logo from '../../resourses/images/logo.svg';
-import exit from '../../resourses/images/exit.svg';
+import exitIco from '../../resourses/images/exit.svg';
+import IconButton from "../common/IconButton";
 
-const Header = ({isAuth, userName}) => {
-
-    console.log(userName);
+const Header = ({userName}) => {
 
     return (
         <header className="header">
@@ -20,7 +19,7 @@ const Header = ({isAuth, userName}) => {
             </div>
             <div className="controls">
                 <p className="controls__username">{userName || "Log in"}</p>
-                <button className={"controls__btn"}><img src={exit} alt="exit_icon"/></button>
+                <IconButton classStyle={"controls__btn"} iconSrc={exitIco} alt="exit_icon"/>
             </div>
         </header>
     )

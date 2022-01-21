@@ -5,7 +5,7 @@ import next from "../../../../resourses/images/next.svg"
 
 import "./TablePaginator.css"
 
-const TablePaginator = ({cars}) => {
+const TablePaginator = ({amount}) => {
 
     return (
         <div className="pagination">
