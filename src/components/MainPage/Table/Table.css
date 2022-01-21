@@ -1,0 +1,25 @@
+.table {
+    width: 100%;
+}
+
+.table tr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    width: 100%;
+}
+
+.table th {
+    padding: 0 20px;
+}
+
+.table td {
+    padding: 0 20px;
+}
+
+/*.tr {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    width: 100%;*/
+/*}*/

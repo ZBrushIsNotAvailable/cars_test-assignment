@@ -1,0 +1,22 @@
+.btn {
+    padding: 8px 20px;
+    min-width: 104px;
+    border-radius: 4px;
+    border: none;
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.filled {
+    color: #F8F7F8;
+    background-color: #22B2BE;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
+}
+
+.outlined {
+    color: #26253D;
+    border: 1px solid #22B2BE;
+    background-color: #F8F7F8;
+}

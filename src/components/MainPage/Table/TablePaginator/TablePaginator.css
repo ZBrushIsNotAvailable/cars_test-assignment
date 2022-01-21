@@ -1,0 +1,30 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 48px;
+}
+
+.pagination > * {
+    padding: 0 20px;
+}
+
+.form__label {
+    margin-right: 4px;
+}
+
+.form__select {
+
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 32px;
+}
+
+.navigation__btn {
+    background-color: transparent;
+    border: none;
+}

@@ -1,0 +1,52 @@
+.header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 40px;
+
+    height: 80px;
+    background: #F8F7F8;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.15);
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    width: max-content;
+}
+
+.controls__username {
+    margin-right: 80px;
+}
+
+.controls__btn {
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+    border: none;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px;
+}
+
+.logo__img {
+    height: 43px;
+    width: 55px;
+    margin-right: 8px;
+}
