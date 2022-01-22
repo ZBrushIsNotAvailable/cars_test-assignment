@@ -6,24 +6,10 @@ import "./Modal.css"
 
 import closeIco from "./../../resourses/images/close.svg"
 
-const Modal = ({title, hide, onSubmit}) => {
-
-    const [inputs, setInputs] = useState({
-        brand: "",
-        model: "",
-        number: "",
-        engine: "FUEL"
-    });
-
-    const onChange = (e) => {
-        setInputs({
-            ...inputs,
-            [e.target.name]: e.target.value
-        });
-    }
+const Modal = ({inputs, title, hide, onInputsChange, onFormSubmit}) => {
 
     return (
-        <form id='popup-form' onSubmit={(e) => onSubmit(e, inputs)} className="modal">
+        <form id='popup-form' onSubmit={onFormSubmit} className="modal">
 
             <div className="modal-main">
                 <div className="modal__head">
@@ -32,10 +18,10 @@ const Modal = ({title, hide, onSubmit}) => {
                 </div>
 
                 <div className="modal__content">
-                    <input name="brand" placeholder="Brand" value={inputs.brand} onChange={onChange}/>
-                    <input name="model" placeholder="Model" value={inputs.model} onChange={onChange}/>
-                    <input name="number" placeholder="Car Number" value={inputs.number} onChange={onChange}/>
-                    <input name="engine" placeholder="Engine Type" value={inputs.engine}  onChange={onChange}/>
+                    <input name="brand" placeholder="Brand" value={inputs.brand} onChange={onInputsChange}/>
+                    <input name="model" placeholder="Model" value={inputs.model} onChange={onInputsChange}/>
+                    <input name="carNumber" placeholder="Car Number" value={inputs.carNumber} onChange={onInputsChange}/>
+                    <input name="engineType" placeholder="Engine Type" value={inputs.engineType} onChange={onInputsChange}/>
                 </div>
 
                 <div className="modal__buttons">

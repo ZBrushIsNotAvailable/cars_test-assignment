@@ -1,17 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import IconButton from "../../common/IconButton";
 
 import editIco from "../../../resourses/images/edit.svg"
 import deleteIco from "../../../resourses/images/delete.svg"
+import ModalContainer from "../../Modal/ModalContainer";
 
-const TableItem = ({id, brand, carNumber, engineType, model, editCar, deleteCar}) => {
+const TableItem = ({brand, carNumber, engineType, model, showModal, modalShown, onDelete, hideModal, handleModal}) => {
 
-    function onDelete() {
-        deleteCar(id)
-    }
-    function onEdit() {
-        editCar(id)
-    }
+
 
     return (
         <tr>
@@ -24,13 +20,20 @@ const TableItem = ({id, brand, carNumber, engineType, model, editCar, deleteCar}
                     alt="edit"
                     iconSrc={editIco}
                     classStyle="item-buttons_edit"
-                    onClick={editCar}
+                    onClick={showModal}
                 />
                 <IconButton
                     alt="delete"
                     iconSrc={deleteIco}
                     classStyle="item-buttons_delete"
                     onClick={onDelete}
+                />
+                <ModalContainer
+                    inputsVal={{brand, carNumber, engineType, model}}
+                    title={"EDIT CAR INFORMATION"}
+                    shown={modalShown}
+                    hideModal={hideModal}
+                    onSubmit={handleModal}
                 />
             </td>
         </tr>

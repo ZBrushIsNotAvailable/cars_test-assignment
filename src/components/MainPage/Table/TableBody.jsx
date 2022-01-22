@@ -1,5 +1,5 @@
 import React from "react";
-import TableItem from "./TableItem";
+import TableItemContainer from "./TableItemContainer";
 import {connect} from "react-redux";
 import {deleteCar, editCar} from "../../../store/cars-reducer";
 
@@ -8,14 +8,14 @@ const TableBody = ({cars, editCar, deleteCar}) => {
     return (
         <tbody>
         {cars.map(car =>
-             <TableItem key={car.id}
-                        editCar={editCar}
-                        deleteCar={deleteCar}
-                        {...car}
+             <TableItemContainer key={car.id}
+                                 editCar={editCar}
+                                 deleteCar={deleteCar}
+                                 {...car}
              />
         )}
         </tbody>
     )
 }
 
-export default connect(null,{deleteCar})(TableBody)
+export default connect(null,{editCar,deleteCar})(TableBody)

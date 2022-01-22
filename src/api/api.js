@@ -27,7 +27,6 @@ export const authAPI = {
 }
 
 export const carsAPI = {
-
     getAllCars() {
         const settings = {
             method: "GET",
@@ -40,6 +39,20 @@ export const carsAPI = {
         return fetch(`${baseURL}cars`, settings)
             .then(response => response.json())
             .catch(err => console.log("Error getting all cars:", err))
+    },
+
+    getCar(carId){
+        const settings = {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": localStorage.getItem("token")
+            },
+        }
+
+        return fetch(`${baseURL}car/${carId}`, settings)
+            .then(response => response.json())
+            .catch(err => console.log("Error getting car by id:", err))
     },
 
     addCar({
@@ -73,12 +86,12 @@ export const carsAPI = {
             .catch(err => console.log("Error adding car:", err))
     },
 
-    editCar({
-                brand,
-                number,
-                engine,
-                model,
-            }){
+    editCar(carId, {
+        brand,
+        carNumber,
+        engineType,
+        model,
+    }) {
 
         const settings = {
             method: "PUT",
@@ -88,8 +101,8 @@ export const carsAPI = {
             },
             body: JSON.stringify({
                 "brand": brand,
-                "carNumber": number,
-                "engineType": engine,
+                "carNumber": carNumber,
+                "engineType": engineType,
                 "mileage": 0,
                 "model": model,
                 "new": true,
@@ -99,9 +112,9 @@ export const carsAPI = {
             })
         }
 
-        return fetch(`${baseURL}api/car`, settings)
+        return fetch(`${baseURL}api/car/${carId}`, settings)
             .then(response => response.json())
-            .catch(err => console.log("Error adding car:", err))
+            .catch(err => console.log("Error editing car:", err))
     },
 
     deleteCar(carId) {
@@ -116,6 +129,6 @@ export const carsAPI = {
 
         return fetch(`${baseURL}car/${carId}`, settings)
             .then(response => response.json())
-            .catch(err => console.log("Error adding car:", err))
+            .catch(err => console.log("Error deleting car:", err))
     }
 }
