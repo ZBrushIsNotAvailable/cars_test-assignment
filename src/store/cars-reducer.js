@@ -40,21 +40,21 @@ export const getCar = (id) => async dispatch => {
 
 export const addCar = specs => async dispatch => {
     const data = await carsAPI.addCar(specs);
-    console.log(specs)
-    console.log("addCar reducer", data)
+    // console.log(specs)
+    // console.log("addCar reducer", data)
     dispatch(getAllCars())
 }
 
 export const editCar = (id, specs) => async dispatch => {
     const data = await carsAPI.editCar(id, specs);
-    console.log(id, specs)
-    console.log("editCar reducer", data)
+    // console.log(id, specs)
+    // console.log("editCar reducer", data)
     dispatch(getAllCars())
 }
 
 export const deleteCar = carId => async dispatch => {
     const data = await carsAPI.deleteCar(carId);
-    console.log("deleteCar red", data)
+    // console.log("deleteCar red", data)
     dispatch(getAllCars())
 }
 

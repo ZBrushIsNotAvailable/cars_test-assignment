@@ -18,7 +18,7 @@ const ModalContainer = ({inputsVal, title, shown, hideModal, onSubmit}) => {
             ...inputs,
             [e.target.name]: e.target.value
         });
-        console.log("iputs",inputs)
+            console.log("inputs",inputs)
     }
 
     const handleForm = (e) => onSubmit(e, inputs)

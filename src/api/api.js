@@ -57,8 +57,8 @@ export const carsAPI = {
 
     addCar({
                brand,
-               number,
-               engine,
+               carNumber,
+               engineType,
                model,
            }) {
 
@@ -70,8 +70,8 @@ export const carsAPI = {
             },
             body: JSON.stringify({
                 "brand": brand,
-                "carNumber": number,
-                "engineType": engine,
+                "carNumber": carNumber,
+                "engineType": engineType,
                 "mileage": 0,
                 "model": model,
                 "new": true,

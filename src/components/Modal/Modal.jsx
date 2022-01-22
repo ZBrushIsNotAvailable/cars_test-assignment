@@ -2,9 +2,9 @@ import React, {useState} from "react";
 import Button from "../common/Button";
 import IconButton from "../common/IconButton";
 
-import "./Modal.css"
-
 import closeIco from "./../../resourses/images/close.svg"
+
+import "./Modal.css"
 
 const Modal = ({inputs, title, hide, onInputsChange, onFormSubmit}) => {
 

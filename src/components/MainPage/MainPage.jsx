@@ -34,18 +34,16 @@ const MainPage = ({cars, getAllCars, addCar}) => {
             <div className="content-body">
                 <Table cars={cars}/>
             </div>
-            {<ModalContainer
+            <ModalContainer
                 title={"ADD A NEW CAR"}
                 shown={modalShown}
                 hideModal={hideModal}
                 onSubmit={handleModal}
             />
-            }
         </div>
     )
 }
 
-const mapStateToProps = state => ({
-    cars: state.carsReducer.cars
-})
+const mapStateToProps = state => ({cars: state.carsReducer.cars})
+
 export default connect(mapStateToProps, {getAllCars, addCar})(MainPage)
