@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/cars_test-assignment/static/css/main.ca3e42d2.css",
+    "main.js": "/cars_test-assignment/static/js/main.8af289fa.js",
+    "static/media/logo.svg": "/cars_test-assignment/static/media/logo.94cdd637ac59e97e2194153e5842772b.svg",
+    "index.html": "/cars_test-assignment/index.html",
+    "static/media/delete.svg": "/cars_test-assignment/static/media/delete.511c77bd2c2386e43f5d4075717be07a.svg",
+    "static/media/next.svg": "/cars_test-assignment/static/media/next.266ea2688e0cdc4246fea090d36fa75e.svg",
+    "static/media/prev.svg": "/cars_test-assignment/static/media/prev.5c42576abdd5f79832c62ec6465a5eb8.svg",
+    "static/media/edit.svg": "/cars_test-assignment/static/media/edit.e3293958719e35f35a0b019204cf503e.svg",
+    "static/media/exit.svg": "/cars_test-assignment/static/media/exit.454546cdcb25f14fd52166239031e979.svg",
+    "static/media/close.svg": "/cars_test-assignment/static/media/close.4e066aa878407d5da6f28bcb0bc1cd53.svg",
+    "main.ca3e42d2.css.map": "/cars_test-assignment/static/css/main.ca3e42d2.css.map",
+    "main.8af289fa.js.map": "/cars_test-assignment/static/js/main.8af289fa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca3e42d2.css",
+    "static/js/main.8af289fa.js"
+  ]
+}
