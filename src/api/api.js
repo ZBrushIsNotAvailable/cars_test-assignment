@@ -1,14 +1,11 @@
 const baseURL = "https://test-backend.esverito.com/"
 
 export const authAPI = {
-    login() {
-        // console.log("login")
 
+    login() {
         const settings = {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
+            headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
                 "password": "aY2mJ56Q06b",
                 "userName": "porselnoid@gmail.com",
@@ -20,13 +17,14 @@ export const authAPI = {
                 if (response.ok) {
                     return response.json()
                 }
-                return response.json().then(err => console.log("Login failed due to error2:", err))
+                return response.json().then(err => console.log("Login failed due to error:", err))
             })
             .catch(err => console.log("Login failed due to error:", err))
     },
 }
 
 export const carsAPI = {
+
     getAllCars() {
         const settings = {
             method: "GET",
@@ -41,7 +39,7 @@ export const carsAPI = {
             .catch(err => console.log("Error getting all cars:", err))
     },
 
-    getCar(carId){
+    getCar(carId) {
         const settings = {
             method: "GET",
             headers: {
@@ -118,7 +116,6 @@ export const carsAPI = {
     },
 
     deleteCar(carId) {
-
         const settings = {
             method: "DELETE",
             headers: {

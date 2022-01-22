@@ -1,12 +1,9 @@
-import React, {useState} from "react";
+import React from "react";
 import TableItemContainer from "./TableItemContainer";
 import {connect} from "react-redux";
 import {deleteCar, editCar} from "../../../store/cars-reducer";
 
 const TableBody = ({cars, sortBy, pageSize, last, editCar, deleteCar}) => {
-
-    console.log("last, pageSize", last, pageSize);
-    console.log("SORT", sortBy);
 
     return (
         <tbody>

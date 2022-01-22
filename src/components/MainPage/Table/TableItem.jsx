@@ -1,9 +1,10 @@
 import React from "react";
+
 import IconButton from "../../common/IconButton";
+import ModalContainer from "../../Modal/ModalContainer";
 
 import editIco from "../../../resourses/images/edit.svg"
 import deleteIco from "../../../resourses/images/delete.svg"
-import ModalContainer from "../../Modal/ModalContainer";
 
 const TableItem = ({brand, carNumber, engineType, model, showModal, modalShown, onDelete, hideModal, handleModal}) => {
 

@@ -24,7 +24,7 @@ const App = ({login}) => {
     );
 }
 
-const AppContainer = connect(() => ({}), {login})(App)
+const AppContainer = connect(null, {login})(App)
 
 const CarsApp = () => {
     return (

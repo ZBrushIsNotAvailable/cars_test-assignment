@@ -10,15 +10,13 @@ const ModalContainer = ({inputsVal, title, shown, hideModal, onSubmit}) => {
         engineType: "FUEL"
     });
 
-
-    if(!shown) return null
+    if (!shown) return null;
 
     const handleInputs = (e) => {
         setInputs({
             ...inputs,
             [e.target.name]: e.target.value
         });
-            console.log("inputs",inputs)
     }
 
     const handleForm = (e) => onSubmit(e, inputs)

@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from "react";
+import {connect} from "react-redux";
+
 import TableBody from "./TableBody";
 import TableHead from "./TableHead";
 import TablePaginator from "./TablePaginator/TablePaginator";
@@ -36,4 +38,6 @@ const Table = ({cars}) => {
     )
 }
 
-export default Table
+const mapStateToProps = state => ({cars: state.carsReducer.cars})
+
+export default connect(mapStateToProps)(Table)

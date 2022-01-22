@@ -7,18 +7,16 @@ import ModalContainer from "../Modal/ModalContainer";
 
 import "./MainPage.css"
 
-const MainPage = ({cars, getAllCars, addCar}) => {
+const MainPage = ({getAllCars, addCar}) => {
 
     useEffect(() => {
         getAllCars();
     }, [])
 
-    // MODAL
     const [modalShown, setModalShown] = useState(false)
 
     const showModal = () => setModalShown(true)
     const hideModal = () => setModalShown(false)
-
     const handleModal = (e, specs) => {
         e.preventDefault();
         addCar(specs)
@@ -32,7 +30,7 @@ const MainPage = ({cars, getAllCars, addCar}) => {
                 <Button onClick={showModal}>ADD CAR</Button>
             </div>
             <div className="content-body">
-                <Table cars={cars}/>
+                <Table />
             </div>
             <ModalContainer
                 title={"ADD A NEW CAR"}
@@ -44,6 +42,5 @@ const MainPage = ({cars, getAllCars, addCar}) => {
     )
 }
 
-const mapStateToProps = state => ({cars: state.carsReducer.cars})
 
-export default connect(mapStateToProps, {getAllCars, addCar})(MainPage)
+export default connect(null, {getAllCars, addCar})(MainPage)

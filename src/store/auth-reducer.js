@@ -1,11 +1,9 @@
 import {authAPI} from "../api/api";
 
 const LOGIN = "LOGIN"
-const REFRESH = "REFRESH"
 
 const initialState = {
-    userName: "",
-    // token: ""
+    userName: ""
 }
 
 const authReducer = (state = initialState, action) => {
@@ -14,7 +12,6 @@ const authReducer = (state = initialState, action) => {
             return {
                 ...state,
                 userName: action.userName,
-                // token: action.token
             }
 
         default:
@@ -22,8 +19,6 @@ const authReducer = (state = initialState, action) => {
     }
 }
 
-
-// обработать рефреш токена
 const setCredentials = (userName) => ({type: LOGIN, userName})
 
 export const login = () => async (dispatch) => {
