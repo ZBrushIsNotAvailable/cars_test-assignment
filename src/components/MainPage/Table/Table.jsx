@@ -10,15 +10,12 @@ const Table = ({cars}) => {
     const [sortBy, setSortBy] = useState("brand")
     const [amount, setAmount] = useState(0)
     const [pageSize, setPageSize] = useState(5)
-
     const [last, setLast] = useState(0)
-
-    const pageNumber = ''
 
     useEffect(() => setAmount(cars.length), [cars.length])
 
     const handleHead = (e) => {
-        setSortBy(e.target.getAttribute("thname"))
+        setSortBy(e.target.getAttribute("name"))
     }
 
     return (

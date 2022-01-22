@@ -14,8 +14,6 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 23px;
-
-
 }
 
 .controls {
@@ -48,5 +46,5 @@
 .logo__img {
     height: 43px;
     width: 55px;
-    margin-right: 8px;
+    margin-right: 10px;
 }
