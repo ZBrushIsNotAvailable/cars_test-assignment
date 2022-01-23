@@ -13,16 +13,13 @@
 }
 
 .form__label {
-    margin-right: 4px;
+    margin-right: 8px;
 }
 
 .form__select {
     background-color: #fff;
-    border: 2px solid #777;
-    border-radius: 4px;
-    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
-    width: max-content;
-    margin-right: 2px;
+    border: none;
+    width: 30px;
 }
 
 .navigation {
