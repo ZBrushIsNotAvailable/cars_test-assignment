@@ -9,8 +9,6 @@ import "./MainPage.css"
 
 const MainPage = ({getAllCars, addCar}) => {
 
-    console.log("Main")
-
     useEffect(() => {
         getAllCars();
     }, [])

@@ -8,8 +8,6 @@ import "./TablePaginator.css"
 
 const TablePaginator = ({amount, pageSize, setPageSize, last, setLast}) => {
 
-    console.log("Paginator")
-
     const onAmountSelect = e => {
         setPageSize(Number(e.target.value))
     }
