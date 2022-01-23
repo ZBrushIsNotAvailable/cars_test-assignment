@@ -10,9 +10,9 @@ import {login} from "./store/auth-reducer";
 
 const App = ({login}) => {
 
-    useEffect(() => {
+    useEffect(()=>{
         login();
-    }, [])
+    },[login])
 
     return (
         <>

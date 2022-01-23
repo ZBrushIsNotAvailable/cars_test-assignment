@@ -9,6 +9,8 @@ import "./MainPage.css"
 
 const MainPage = ({getAllCars, addCar}) => {
 
+    console.log("Main")
+
     useEffect(() => {
         getAllCars();
     }, [])
@@ -30,7 +32,7 @@ const MainPage = ({getAllCars, addCar}) => {
                 <Button onClick={showModal}>ADD CAR</Button>
             </div>
             <div className="content-body">
-                <Table />
+                <Table/>
             </div>
             <ModalContainer
                 title={"ADD A NEW CAR"}

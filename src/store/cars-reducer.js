@@ -29,6 +29,7 @@ const setSelectedCar = (car) => ({type: SET_SELECTED_CAR, car})
 
 
 export const getAllCars = () => async dispatch => {
+    console.log("getAllCars")
     const data = await carsAPI.getAllCars();
     dispatch(setCars(data.cars))
 }

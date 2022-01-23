@@ -1,7 +1,7 @@
 import React from "react";
-import TableItemContainer from "./TableItemContainer";
 import {connect} from "react-redux";
 import {deleteCar, editCar} from "../../../store/cars-reducer";
+import TableItemContainer from "./TableItemContainer";
 
 const TableBody = ({cars, sortBy, pageSize, last, editCar, deleteCar}) => {
 

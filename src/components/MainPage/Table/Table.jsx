@@ -20,6 +20,9 @@ const Table = ({cars}) => {
         setSortBy(e.target.getAttribute("name"))
     }
 
+    console.log("Table")
+
+
     return (
         <div className="table_wrapper">
             <table className="table">

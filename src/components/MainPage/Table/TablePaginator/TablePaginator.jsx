@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import IconButton from "../../../common/IconButton";
 
 import prevIco from "../../../../resourses/images/prev.svg"
@@ -7,6 +7,8 @@ import nextIco from "../../../../resourses/images/next.svg"
 import "./TablePaginator.css"
 
 const TablePaginator = ({amount, pageSize, setPageSize, last, setLast}) => {
+
+    console.log("Paginator")
 
     const onAmountSelect = e => {
         setPageSize(Number(e.target.value))
@@ -20,10 +22,8 @@ const TablePaginator = ({amount, pageSize, setPageSize, last, setLast}) => {
     }
 
     const toNextPage = () => {
-        if ((last - pageSize) < amount)
+        if ((last + pageSize) < amount)
             setLast(last + pageSize);
-        else
-            setLast(amount - last)
     }
 
     const paragraphContent = () => {
